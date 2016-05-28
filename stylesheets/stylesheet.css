@@ -121,6 +121,24 @@ a {
 	outline: none;
 }
 
+.nav-is-stuck .main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	animation: stickAnim .3s;
+}
+ 
+@keyframes stickAnim {
+	0% {
+		transform: translateY(-86px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
 .page-header {
   color: #fff;
   text-align: center;
