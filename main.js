@@ -7,7 +7,6 @@
 
 	MIT license
  */ 
-
 (function() {
 	var lastTime = 0;
 	var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -34,46 +33,45 @@
 	}
 }());
 
+/*
+	Sticky menu script
+ */
 (function(w,d,undefined){
- 
 	var el_html = d.documentElement,
 		el_body = d.getElementsByTagName('body')[0],
 		header = d.getElementById('header'),
-		menuIsStuck = function() {
-
-
-			var wScrollTop	= w.pageYOffset || el_body.scrollTop,
+		menuIsStuck = function(triggerElement) {
+			var _scrollTop	= w.pageYOffset || el_body.scrollTop,
 				regexp		= /(nav\-is\-stuck)/i,
 				classFound	= el_html.className.match( regexp ),
 				navHeight	= header.offsetHeight,
 				bodyRect	= el_body.getBoundingClientRect(),
-				scrollValue	= 2;
- 
-			// si le scroll est d'au moins 2 et
-			// la class nav-is-stuck n'existe pas sur HTML
-			if ( wScrollTop > scrollValue && !classFound ) {
+				scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 2,
+				scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
+
+			// Si le scroll est d'au moins à 2 et la classe nav-is-stuck n'existe pas
+			if ( _scrollTop > scrollValFix && !classFound ) {
 				el_html.className = el_html.className + ' nav-is-stuck';
 				el_body.style.paddingTop = navHeight + 'px';
 			}
- 
-			// si le scroll est inférieur à 2 et
-			// la class nav-is-stuck existe
-			if ( wScrollTop < 2 && classFound ) {
-				el_html.className = el_html.className.replace( regexp, '' );
-				el_body.style.paddingTop = '0';
-			}
 
+			// Si le scroll est inférieur ou égale à 2 et la classe nav-is-stuck existe
+			if ( _scrollTop <= 2 && classFound ) {
+				el_html.className = el_html.className.replace( regexp, '' );
+				el_body.style.paddingTop = '0px';
+			}
 		},
 		onScrolling = function() {
-			// on exécute notre fonction menuIsStuck()
-			// dans la fonction onScrolling()
-			menuIsStuck();
+			// on execute la fonction menuIsStuck() dans la fonction onScrolling()
+			menuIsStuck( d.getElementById('main') );
 		};
- 
-	// quand on scroll
+
+	el_html.className = el_html.className + ' js';
+
+	// Quand on scroll
 	w.addEventListener('scroll', function(){
-		// on exécute la fonction onScrolling()
+		// On execute la fonction onScrolling()
 		w.requestAnimationFrame( onScrolling );
 	});
- 
+	
 }(window, document));
