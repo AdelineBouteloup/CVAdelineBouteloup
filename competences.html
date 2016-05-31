@@ -78,10 +78,10 @@
 					classFound	= el_html.className.match( regexp ),
 					navHeight	= header.offsetHeight,
 					bodyRect	= el_body.getBoundingClientRect(),
-					scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 800,
+					scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 2,
 					scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
 	
-				// if scroll down is 700 or more and nav-is-stuck class doesn't exist
+				// if scroll down is 2 or more and nav-is-stuck class doesn't exist
 				if ( _scrollTop > scrollValFix && !classFound ) {
 					el_html.className = el_html.className + ' nav-is-stuck';
 					el_body.style.paddingTop = navHeight + 'px';
