@@ -47,9 +47,9 @@
 				classFound	= el_html.className.match( regexp ),
 				navHeight	= header.offsetHeight,
 				bodyRect	= el_body.getBoundingClientRect(),
-				scrollValue	= 600;
+				scrollValue	= 2;
  
-			// si le scroll est d'au moins 600 et
+			// si le scroll est d'au moins 2 et
 			// la class nav-is-stuck n'existe pas sur HTML
 			if ( wScrollTop > scrollValue && !classFound ) {
 				el_html.className = el_html.className + ' nav-is-stuck';
