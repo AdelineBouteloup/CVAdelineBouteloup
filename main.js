@@ -75,3 +75,9 @@
 	});
 	
 }(window, document));
+
+/*
+   Accès à la base MongoDB formation.json
+*/
+var mesFormations = db.formation.find().sort({"annee_fin": -1})
+
