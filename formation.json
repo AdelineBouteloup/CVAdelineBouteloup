@@ -1,0 +1,38 @@
+[
+ {
+  "_id":"formation:1",
+  "annee_fin":"2010",
+  "diplome":"Master 2 Cartographie et gestion de l'environnement",
+  "lien":"https://www.univ-nantes.fr/1331225225877/0/fiche___formation/&RH=INSTITUTIONNEL",
+  "titre_lien":"Université de Nantes"
+ },
+ {
+  "_id":"formation:2",
+  "annee_fin":"2009",
+  "diplome":"Master 1 Biologie et géologie de l'environnement",
+  "lien":"https://www.univ-nantes.fr/M1GEOPHYS/0/fiche___formation/&RH=FORIN",
+  "titre_lien":"Université de Nantes"
+ },
+ {
+  "_id":"formation:3",
+  "annee_debut":"2006",
+  "annee-fin":"2008",
+  "diplome":"Licence Sciences de la Vie - Sciences de la Terre",
+  "lien":"http://www.univ-lemans.fr/fr/formation/l_offre_de_formation/LILMD/0004/slibbxx-302.html",
+  "titre_lien":"Université du Maine (Le Mans)"
+ },
+ {
+  "_id":"formation:4",
+  "annee_fin":"2005",
+  "diplome":"Première année de Médecine",
+  "lien":"http://www.univ-angers.fr/fr/index.html",
+  "titre_lien":"Université d'Angers"
+ },
+ {
+  "_id":"formation:5",
+  "annee_fin":"2004",
+  "diplome":"Bac S avec mention AB",
+  "lien":"http://bellevue.paysdelaloire.e-lyco.fr/",
+  "titre_lien":"Lycée Bellevue (Le Mans)"
+ }
+]
