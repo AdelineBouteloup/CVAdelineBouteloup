@@ -77,17 +77,28 @@
 }(window, document));
 
 /*
-   Accès à la base MongoDB formation.json
+   	Accès à la base MongoDB formation.json
 */
 var mesFormations = db.formation.find().sort({"annee_fin": -1})
 
-var maxBar = 280;
-var currentBar = document.getTimestamp();
-var progressBar;
-var intervalId;
 
-var initialisation = function() {
-	progressBar = document.getElementById( "progressBar" );
-	progressBar.value = currentBar;
-	progressBar.max = maxBar;
+/*
+	Barre de progression
+*/
+var maxprogress = 280;   // total à atteindre
+var actualprogress = 0;  // valeur courante
+var itv = 0;  // id pour setinterval
+function prog()
+{
+  if(actualprogress >= maxprogress) 
+  {
+    clearInterval(itv);   	
+    return;
+  }	
+  var progressnum = document.getElementById("progressnum");
+  var indicator = document.getElementById("indicator");
+  actualprogress += 1;	
+  indicator.style.width=actualprogress + "px";
+  progressnum.innerHTML = actualprogress;
+  if(actualprogress == maxprogress) clearInterval(itv);   
 }
