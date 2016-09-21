@@ -23,8 +23,15 @@
   </head>
   <body>
     <script src="main.js"></script>
-    	<div class="progress">
-  		<progress value="0" max="100"></progress>
+	<div id="pwidget">  
+		<div id="progressbar">
+    			<div id="indicator"></div>
+		</div>
+		<div id="progressnum">0</div>
 	</div>
+	<input type="button" name="Submit" value="Lancer la progression"
+    		onclick="itv = setInterval(prog, 100)" />
+	<input type="button" name="Submit" value="Stopper"
+    		onclick="clearInterval(itv)" />
   </body>
 </html>
