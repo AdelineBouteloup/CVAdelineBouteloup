@@ -81,3 +81,13 @@
 */
 var mesFormations = db.formation.find().sort({"annee_fin": -1})
 
+var maxBar = 280;
+var currentBar = document.getTimestamp();
+var progressBar;
+var intervalId;
+
+var initialisation = function() {
+	progressBar = document.getElementById( "progressBar" );
+	progressBar.value = currentBar;
+	progressBar.max = maxBar;
+}
