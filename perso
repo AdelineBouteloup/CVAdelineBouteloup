@@ -1,1 +1,28 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page personnelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <header id="header" role="banner" class="main-header">
+      <div class="header-inner">
+		    <div class="header-logo">
+			    <img src="logo.png" alt="CV Adeline" width="150" height="45">
+		    </div>
+		    <nav class="header-nav">
+			    <ul>
+				    <li><a href="http://adelinebouteloup.github.io/CVAdelineBouteloup/index.html">Accueil</a></li>
+			    </ul>
+		    </nav>
+	    </div>
+    </header>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <p>Prendre contact avec moi ici !</p>
+  </body>
+</html>
