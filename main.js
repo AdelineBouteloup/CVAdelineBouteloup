@@ -85,6 +85,14 @@ var mesFormations = db.formation.find().sort({"annee_fin": -1})
 /*
 	Barre de progression
 */
+var now = new Date();
+var annee   = now.getFullYear();
+var mois    = now.getMonth() + 1;
+var jour    = now.getDate();
+var heure   = now.getHours();
+var minute  = now.getMinutes();
+var seconde = now.getSeconds();
+
 var maxprogress = 280;   // total à atteindre
 var actualprogress = 0;  // valeur courante
 var itv = 0;  // id pour setinterval
